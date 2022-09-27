@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: lightgrey;
+  font-family: 'Arial';
+  font-size: 24px;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  padding: 24px;
+}
+
+.directory {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+a {
+  display: block;
+  /* width: 200px; */
+  height: 120px;
+  margin: 24px;
+  padding: 24px;
+  color: inherit;
+  background: white;
+  text-decoration: none;
+}
+
+a:hover {
+  background: lightgoldenrodyellow;
+}
+

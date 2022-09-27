@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url(Fraunces72pt-Bold.woff2);
+}
+
+html {
+  background: linear-gradient(to bottom, dodgerblue 0%, aliceblue 100%);
+  font-size: 18px;
+  font-family: 'Fraunces';
+}
+
+body {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 720px;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.2)
+}
+
+header {
+  position: relative;
+  color: cornsilk;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: rgba(255, 255, 255, 0.2)
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header time {
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+}
+
+.collection {
+  margin-top: 200px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.2)
+}
+
+.fruit {
+  position: relative;
+  width: 33.3%;
+  height: 200px;
+}
+
+.fruit a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.fruit img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fruit .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: aliceblue;
+  border: 1px solid dodgerblue;
+  opacity: 1;
+  transition: margin-left 0.5s linear;
+}
+
+.fruit:hover .cover {
+  margin-left: 200px;
+}
+
+.fruit .cover h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: dodgerblue;
+}
+
+footer {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
