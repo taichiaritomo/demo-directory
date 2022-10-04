@@ -47,17 +47,17 @@ body {
   /* transition all properties that might change */
   /* transition: all 3s ease; */
 
-  animation-name: swim;
-  animation-duration: 5s;
+  animation-name: breathing;
+  animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
 
-@keyframes swim {
+@keyframes breathing {
   0% {
     margin-top: 0;
-    width: 300px;
+    width: 400px;
     height: 120px;
     opacity: 0.2;
   }
@@ -70,18 +70,11 @@ body {
 }
 
 .jellyfish:nth-child(1) {
-  transition-delay: 2.5s
+  animation-delay: -2.5s;
+  animation-timing-function: 3s;
 }
 
-/* Caption */
-.caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px;
-  color: rgba(255, 255, 255, 0.5);
-  opacity: 0.2;
-  text-shadow: 0 0 1px rgba(255,255,255,1);
-  text-align: center;
+.jellyfish:nth-child(2) {
+  animation-delay: -3.5s;
+  animation-timing-function: 4s;
 }
