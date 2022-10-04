@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(7, 7, 176), rgb(0, 0, 91));
+}
+
+.jellyfish-container {
+  /* absolutely centers horizontally and vertically */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 300px;
+  height: 300px;
+}
+
+.jellyfish {
+  /* size */
+  width: 300px;
+  height: 120px;
+
+  /* absolutely centers horizontally and vertically */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* color */
+  opacity: 0.2;
+  background: radial-gradient(ellipse at top, rgba(237, 234, 217, 0.4), transparent);
+  
+  /* inner glow */
+  box-shadow: inset 0 4px 12px rgba(237, 234, 217, 0.8), 0 18px 18px -8px rgba(237, 234, 217, 0.2);
+
+  /* Makes it round */
+  border-top-left-radius: 100% 150%;
+  border-top-right-radius: 100% 150%;
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 60%;
+
+  /* transition all properties that might change */
+  /* transition: all 3s ease; */
+
+  animation-name: swim;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swim {
+  0% {
+    margin-top: 0;
+    width: 300px;
+    height: 120px;
+    opacity: 0.2;
+  }
+  100% {
+    margin-top: -100px;
+    width: 120px;
+    height: 180px;
+    opacity: 1;
+  }
+}
+
+.jellyfish:nth-child(1) {
+  transition-delay: 2.5s
+}
+
+/* Caption */
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.2;
+  text-shadow: 0 0 1px rgba(255,255,255,1);
+  text-align: center;
+}
