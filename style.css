@@ -22,7 +22,7 @@ h1 {
   align-items: flex-end;
 }
 
-a {
+.directory a {
   display: block;
   /* width: 200px; */
   height: 120px;
@@ -33,7 +33,11 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+.directory a:hover {
   background: lightgoldenrodyellow;
+}
+
+footer {
+  padding: 24px;
 }
 
