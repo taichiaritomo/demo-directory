@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hover to Show</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div id="group-1">
+    <div class="preview">
+      Hover here...
+    </div>
+    <div class="message">
+      A lot of us have been envisioning this effect, where you hover over something, and some more information appears somewhere else. Here's one way to do it. Note that this works because this "message" element is a sibling of the hovered element. CSS hover selectors can only select later siblings or children.
+    </div>
+  </div>
+
+  <div id="group-2">
+    <div class="preview">
+      or here...
+      <div class="message">
+        Unlike the other one, this message is a child, and it's positioned relative to the preview element. Look carefully at the CSS selector for this one because it's different!
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+/* GROUP 1 */
+
+/* Selects the .preview inside #group-1 */
+#group-1 .preview {
+  position: absolute;
+  top: 20vh;
+  right: 20vw;
+
+  background: peachpuff;
+  box-shadow: 0 0 9px 9px peachpuff;
+}
+
+/* Selects the .message inside #group-1 */
+#group-1 .message {
+  /* Hide the message by default */
+  display: none;
+
+  /* These styles are applied, but since the element is hidden, you just won't see it until it's visible. */
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: peachpuff;
+  width: 300px;
+  padding: 12px;
+}
+
+/*
+When you hover over .preview, make the message visible.
+The "~" means "sibling", so the whole thing reads...
+"Inside #group-1, when .preview is hovered, its sibling with the class .message has these styles..."
+*/
+#group-1 .preview:hover ~ .message {
+  display: block;
+}
+
+/* GROUP 2 */
+
+#group-2 .preview {
+  position: absolute;
+  top: 40vh;
+  left: 30vw;
+
+  background: skyblue;
+  box-shadow: 0 0 9px 9px skyblue;
+}
+
+#group-2 .message {
+  display: none;
+
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: skyblue;
+  width: 300px;
+  padding: 12px;
+}
+
+/*
+Similar to the one for #group-1 but notice that we have a ">" instead of "~"
+The ">" means "direct child", so the whole thing reads...
+"Inside #group-2, when .preview is hovered, its direct child with the class .message has these styles..."
+*/
+#group-2 .preview:hover > .message {
+  display: block;
+}

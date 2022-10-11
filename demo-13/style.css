@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.column {
+  height: 600px;
+}
+
+/*
+Column 1 starts at 200px and doesn't grow or shrink
+Notice we're using flex-basis, flex-grow, and flex-shrink to control how the width behaves.
+*/
+#column-1 {
+  flex-basis: 200px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  background: crimson;
+}
+
+/* Column 2 starts at 400px and will grow or shrink to fill the remaining space */
+#column-2 {
+  flex-basis: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  background: gray;
+}
+
+/* Column 3 starts at 200px and doesn't grow or shrink  */
+#column-3 {
+  flex-basis: 200px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  background: yellowgreen;
+}
+
+/*
+When the screen is too narrow,
+change the container from display: flex to the default, display: block
+This makes everything stack instead of lining up side by side.
+*/
+@media screen and (max-width: 600px) {
+  .container {
+    display: block;
+  }
+
+  .column {
+    height: 300px;
+  }
+}
