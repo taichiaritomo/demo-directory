@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #000000;
+  background: seagreen; /* the last written style applies */
+  color: seashell;
+  font-size: 24px;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 0;
+  margin-left: auto; /* for a "block" element, "auto" margins on the left and right sides centers the element horizontally */
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+header {
+  background: azure;
+  color: seagreen;
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 12px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+header p {
+  text-align: center;
+  margin: 0;
+}
+
+.song {
+  background: linear-gradient(to bottom, seagreen -100%, seashell 100%);
+}
+
+section {
+  margin-bottom: 36px;
+}
+
+section p:first-child {
+  border-top: 2px solid seagreen;
+}
+
+.song p {
+  position: relative;
+  color: seagreen;
+  margin: 0;
+  perspective: 1000px;
+  /* border: 1px solid seagreen; */
+}
+
+.song p span[lang="jp"] {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  background: azure;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid seagreen;
+  transition: opacity 0.4s linear;
+}
+
+/* when you hover over the p, the span flips */
+.song p:hover span[lang="jp"] {
+  pointer-events: none;
+  /* opacity: 0 */
+}
+
+/* flipping animation, for fun */
+.song p span[lang="jp"] {
+  transform-origin: top left;
+  transition: transform 0.25s linear;
+}
+.song p:hover span[lang="jp"] {
+  transform: rotate3d(1, 0, 0, 75deg);
+}
+
+.song p span[lang="en"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding: 21px 12px;
+  border-bottom: 2px solid seagreen;
+  font-size: 0.5em;
+}
+/* 
+.song p input[type="checkbox"] {
+  position: absolute;
+  left: -2em;
+}
+
+.song p input[type="checkbox"]:checked ~ span[lang="jp"] {
+  opacity: 0;
+} */
+
+a {
+  color: darkslategray;
+}
