@@ -1,0 +1,30 @@
+body {
+  background: brown;
+  color: white;
+  font-size: 24px;
+  width: 375px;
+  margin: 0 auto;
+}
+
+.dot {
+  width: 275px;
+  height: 150px;
+  border-radius: 50%;
+  background: white;
+  color: brown;
+  padding: 50px;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  transform: scale(0.01);
+
+  transition: transform 3s linear;
+}
+
+.dot.enlarged {
+  transform: scale(1)
+}
